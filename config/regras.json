@@ -1,0 +1,20 @@
+{
+  "_aviso": "Regras PENDENTES de aprovação. Destinatários NÃO ficam aqui: vêm da Base de Destinatários carregada pela usuária.",
+  "divisaoNegocio": "8000",
+  "canal": "12",
+  "grupoClientes": "*",
+  "setorAtividade": "*",
+  "email": {
+    "assinatura": "Att,\n\n(preencha sua assinatura aqui)",
+    "ZDEF": {
+      "assunto": "CADASTRO DIAS ADICIONAIS CLIENTES: {BANDEIRA}",
+      "saudacao": "Bom dia!",
+      "corpo": "Conforme aprovação anexa, por gentileza, seguir com o cadastro dos dias adicionais para os clientes relacionados na planilha anexa.\n\nMuito obrigada!"
+    },
+    "ZT31": {
+      "assunto": "CADASTRO DESCONTO DE FASEAMENTO CLIENTE: {BANDEIRA}",
+      "saudacao": "Boa tarde!",
+      "corpo": "Por gentileza, seguir com o cadastro do desconto de faseamento {PERCENTUAL}para os clientes relacionados na planilha anexa.\n\nMuito obrigada!"
+    }
+  }
+}
