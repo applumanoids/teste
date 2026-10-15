@@ -74,8 +74,9 @@
     $('.lay').className = 'lay ' + (S.step < 4 ? 'noaside' : S.step === 6 ? 'w2' : 'w1');
     const a = AUTOS.find(x => x.id === S.tipo);
     $('#body').innerHTML = `<h2>${a.icone} ${a.titulo}</h2>` + [null, s1, s2, s3, s4, s5, s6, s7][S.step]();
-    $('#nav').innerHTML = `<button class="sec" id="bk" ${S.step === 1 ? 'disabled' : ''}>← Voltar</button>${S.step < 7 ? '<button id="fw">Continuar →</button>' : ''}`;
-    $('#bk').onclick = () => go(S.step - 1); if ($('#fw')) $('#fw').onclick = () => go(S.step + 1);
+    const nv = `<button class="sec bk" ${S.step === 1 ? 'disabled' : ''}>← Voltar</button>${S.step < 7 ? '<button class="fw">Continuar →</button>' : ''}`;
+    $('#nav').innerHTML = $('#navtop').innerHTML = nv;
+    document.querySelectorAll('.navb .bk').forEach(b => b.onclick = () => go(S.step - 1)); document.querySelectorAll('.navb .fw').forEach(b => b.onclick = () => go(S.step + 1));
     [null, b1, b2, b3, b4, b5, b6, b7][S.step](); preview(); document.querySelectorAll('[data-w]').forEach(e => requestAnimationFrame(() => e.style.width = e.dataset.w + '%')); document.querySelectorAll('[data-bg]').forEach(e => e.style.background = e.dataset.bg);
   }
 

@@ -34,3 +34,16 @@ input,textarea,select{width:100%;padding:12px 14px;border:2px solid var(--ln);bo
 details{border:2px solid var(--ln);border-radius:14px;padding:12px 18px;margin:10px 0}summary{cursor:pointer;font-weight:700}#boot{background:#fffbeb;border:2px solid var(--wr);padding:16px;margin:16px 32px;border-radius:14px}[hidden]{display:none!important}
 #msg{position:relative}
 #body,aside{min-width:0}.how .tw{max-height:none}
+
+/* ajuste de escala e destaque da etapa atual */
+body{font-size:15px}header{padding:12px 28px}header h1{font-size:23px}header p{font-size:14px}nav button{padding:8px 14px;font-size:14px;animation:none!important}nav button.act{animation:none!important}
+main{margin:18px auto;padding:0 20px}button{padding:10px 20px;font-size:15px}
+.prog{gap:8px;margin-bottom:14px}.prog div{padding:9px 6px;font-size:14px;border-radius:12px;min-width:110px}.prog .on{animation:blink 1.4s ease-in-out infinite}
+@keyframes blink{0%,100%{box-shadow:0 0 0 0 #8b5cf6aa;transform:scale(1)}50%{box-shadow:0 0 0 9px #8b5cf600;transform:scale(1.05)}}
+#body,aside{padding:22px 26px;border-radius:16px}aside{top:84px;padding:16px}#body h2{font-size:22px;margin-bottom:12px}h3{font-size:18px}h4{font-size:16px}
+.lay.w1{grid-template-columns:minmax(0,1fr) 460px}.lay{gap:18px}#nav{margin-top:16px}.navb{margin:0 0 14px;gap:12px}
+input,textarea,select{padding:9px 12px;font-size:15px}.combo input{font-size:16px;padding:12px 46px 12px 14px}.combo .arr{top:5px;width:36px;height:36px}.dd div{font-size:15px;padding:9px 14px}
+.card{padding:24px;min-height:170px}.card b{font-size:19px}.card i{width:60px;height:60px;font-size:30px}
+.hero{padding:20px}.stp b{font-size:18px}.stp small{font-size:14px}.stp span{width:38px;height:38px;font-size:18px}.drop{padding:26px 16px}.drop .ic{font-size:40px}.drop b{font-size:19px}.drop small{font-size:14px}
+th,td{padding:7px 10px}table{font-size:14px}.kpi{padding:14px 16px}.kpi b{font-size:30px}.kpis{gap:12px;margin-bottom:16px}.bar{grid-template-columns:130px 1fr 42px;font-size:14px}.ch{padding:14px 16px}.charts{grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px}
+.err,.warn,.ok,.inf{font-size:15px;padding:12px 16px}.ol .f{font-size:14px}.ol .tx{font-size:15px}

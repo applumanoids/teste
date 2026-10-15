@@ -179,8 +179,8 @@
     const wb = new ExcelJS.Workbook(), ws = wb.addWorksheet('Destinatarios');
     ws.columns = DCOLS.map((c, i) => ({ header: c, width: [12, 24, 22, 34, 8, 8][i] }));
     ws.getRow(1).eachCell(c => { c.font = { bold: true }; c.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFE7E6E6' } }; });
-    const e = 'luma.sampaio.dados@gmail.com', d = [['ZDEF', 'BRAIR', 'Pessoa Teste 1', 'PARA'], ['ZDEF', 'BRAIR', 'Pessoa Teste 2', 'CC'], ['ZT31', 'BRAIR', 'Pessoa Teste 1', 'PARA'], ['AMBAS', 'BANDEIRA EXEMPLO A', 'Pessoa Teste 3', 'PARA'], ['AMBAS', 'BANDEIRA EXEMPLO A', 'Pessoa Teste 4', 'CC'], ['ZDEF', 'BANDEIRA EXEMPLO B', 'Pessoa Teste 5', 'PARA'], ['ZT31', 'BANDEIRA EXEMPLO B', 'Pessoa Teste 6', 'PARA'], ['ZT31', 'BANDEIRA EXEMPLO B', 'Pessoa Teste 7', 'CC'], ['AMBAS', 'BANDEIRA EXEMPLO C', 'Pessoa Teste 8', 'PARA'], ['AMBAS', 'BANDEIRA EXEMPLO C', 'Pessoa Teste 9', 'CC'], ['ZDEF', 'BANDEIRA EXEMPLO C', 'Pessoa Inativa', 'PARA']];
-    d.forEach((r, i) => ws.addRow([r[0], r[1], r[2], e, r[3], i === d.length - 1 ? 'NÃO' : 'SIM']));
+    const d = [['ZDEF', 'BRAIR', 'Pessoa Teste 1', 'PARA'], ['ZDEF', 'BRAIR', 'Pessoa Teste 2', 'CC'], ['ZT31', 'BRAIR', 'Pessoa Teste 1', 'PARA'], ['AMBAS', 'BANDEIRA EXEMPLO A', 'Pessoa Teste 3', 'PARA'], ['AMBAS', 'BANDEIRA EXEMPLO A', 'Pessoa Teste 4', 'CC'], ['ZDEF', 'BANDEIRA EXEMPLO B', 'Pessoa Teste 5', 'PARA'], ['ZT31', 'BANDEIRA EXEMPLO B', 'Pessoa Teste 6', 'PARA'], ['ZT31', 'BANDEIRA EXEMPLO B', 'Pessoa Teste 7', 'CC'], ['AMBAS', 'BANDEIRA EXEMPLO C', 'Pessoa Teste 8', 'PARA'], ['AMBAS', 'BANDEIRA EXEMPLO C', 'Pessoa Teste 9', 'CC'], ['ZDEF', 'BANDEIRA EXEMPLO C', 'Pessoa Inativa', 'PARA']];
+    d.forEach((r, i) => ws.addRow([r[0], r[1], r[2], '', r[3], i === d.length - 1 ? 'NÃO' : 'SIM']));
     return new Uint8Array(await wb.xlsx.writeBuffer());
   }
   const api = { COLS, linhaReport, parseDest, destinatarios, modeloDest, N, parseCarteira, detectModel, readEmailSheet, validar, montarEmail, gerarExcel, gerarEml, nomeArq, pnum };
