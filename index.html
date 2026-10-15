@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; form-action 'none'; base-uri 'none'; object-src 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Central de Automações</title><link rel="stylesheet" href="css/style.css"></head><body>
+<header><div><h1>Central de Automações</h1><p>Automatize planilhas, organize informações e prepare e-mails de forma simples, rápida e segura.</p></div>
+<nav><button class="sec" data-v="home">🏠 Início</button><button class="sec" data-v="manual">❓ Manual</button><button class="sec" data-v="priv">🔒 Privacidade e Segurança</button><button class="sec" id="reiniciar">Reiniciar</button></nav></header>
+<div id="boot">⚠️ Carregando… Se esta mensagem não sumir, os arquivos da pasta css, js, libs e config não foram encontrados. Confirme que TODAS as pastas do projeto foram enviadas ao GitHub, no mesmo nível do index.html, e que o GitHub Pages terminou de publicar.</div>
+<main><div id="msg" role="alert"></div>
+<section id="v-home"><div id="cards" class="cards"></div></section>
+<section id="v-auto" hidden><div id="prog"></div><div class="lay"><div id="body"></div><aside id="aside"></aside></div><div class="row" id="nav"></div></section>
+<section id="v-manual" hidden></section><section id="v-priv" hidden></section></main>
+<script src="libs/exceljs.min.js"></script><script src="libs/jszip.min.js"></script>
+<script src="js/core.js"></script><script src="js/automacoes.js"></script><script src="js/paginas.js"></script><script src="js/app.js"></script></body></html>
